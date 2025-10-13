@@ -254,8 +254,6 @@ nav {
   margin-left: 15px;
   background-color: #dddddd;
   padding: 20px;
-
-  border-radius: 10px;
 }
 
 nav > div {
@@ -269,8 +267,6 @@ nav > ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  border: solid 1px black;
-  border-radius: 10px;
   overflow: hidden;
 }
 

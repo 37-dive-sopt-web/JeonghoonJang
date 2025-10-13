@@ -58,71 +58,12 @@ header {
   border-radius: 50%;
 }
 
-/* nav바 부분*/
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: sticky;
-  top: 160px;
-  width: 130px;
-  margin-left: 15px;
-  background-color: #dddddd;
-  padding: 20px;
-
-  border-radius: 10px;
-}
-
-nav > div {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-nav > ul {
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: solid 1px black;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-a {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  background-color: white;
-  border-radius: 10px;
-}
-
-a[href^="#heroSection"] {
-  border-radius: 10px 10px 0 0;
-}
-
-a[href^="#footer"] {
-  border-radius: 0 0 10px 10px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 50px;
-}
-
 /* main 부분 */
 
 main {
   display: flex;
   flex-direction: column;
-  padding: 0 30px 0 200px;
+  padding: 71px 30px 0 200px;
   gap: 20px;
 }
 
@@ -300,6 +241,65 @@ footer > p {
 .bannerTrack > img:hover {
   transform: scale(1.04);
   border-radius: 15px;
+}
+
+/* nav바 부분*/
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  bottom: 300px;
+  width: 130px;
+  margin-left: 15px;
+  background-color: #dddddd;
+  padding: 20px;
+
+  border-radius: 10px;
+}
+
+nav > div {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav > ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: solid 1px black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: white;
+  border-radius: 10px;
+}
+
+a[href^="#heroSection"] {
+  border-radius: 10px 10px 0 0;
+}
+
+a[href^="#footer"] {
+  border-radius: 0 0 10px 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 50px;
 }
 
 @keyframes rolling {

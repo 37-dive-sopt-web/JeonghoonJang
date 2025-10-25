@@ -172,6 +172,7 @@ main {
 .cardImage {
   width: 100%;
   height: 130px;
+  object-fit: cover;
 }
 
 .cardMidContent {
@@ -222,7 +223,6 @@ footer > p {
   display: flex;
   animation: rolling 6s linear infinite;
   gap: 10px;
-  box-sizing: border-box;
   width: max-content;
   overflow: visible;
 }

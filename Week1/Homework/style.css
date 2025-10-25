@@ -187,12 +187,12 @@ main {
   font-size: small;
 }
 
-.like_icon {
+.likeIcon {
   width: 24px;
   cursor: pointer;
 }
 
-.like_icon:hover {
+.likeIcon:hover {
   content: url("./assets/heart_red.svg");
 }
 

@@ -56,11 +56,13 @@ header {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  object-fit: contain;
 }
 
 .headerIcons {
   display: flex;
   gap: 5px;
+  object-fit: contain;
 }
 /* main 부분 */
 

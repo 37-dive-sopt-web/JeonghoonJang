@@ -58,6 +58,10 @@ header {
   border-radius: 50%;
 }
 
+.headerIcons {
+  display: flex;
+  gap: 5px;
+}
 /* main 부분 */
 
 main {

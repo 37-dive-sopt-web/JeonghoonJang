@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  cursor: pointer;
+  object-fit: fill;
+}
+
+body {
+  height: 100vh;
+  background-color: tan;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 4px 12px;
+  color: white;
+  background-color: inherit;
+  border-radius: 50px;
+}
+
+/* 헤더 부분 */
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: azure;
+  z-index: 1;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.headerIcons {
+  display: flex;
+  gap: 5px;
+  object-fit: contain;
+}
+/* main 부분 */
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 30px 0 200px;
+  gap: 20px;
+}
+
+/* heroSection */
+#heroSection {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+}
+
+.heroImage {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+
+  transition: transform 0.2s ease;
+}
+
+.heroImage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heroContent > h1 {
+  font-size: x-large;
+}
+
+.heroContent > p {
+  font-size: medium;
+}
+
+.chipContainer {
+  display: flex;
+  gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chipContainer > div {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.chipContainer > div:hover {
+  transform: translateY(-3px);
+}
+
+.heroContent > .chipContainer > div:nth-child(1) {
+  background-color: violet;
+}
+
+.heroContent > .chipContainer > div:nth-child(2) {
+  background-color: red;
+}
+
+/* skillSection */
+#skillSection {
+  padding: 20px;
+}
+
+#skillSection > .chipContainer > .chip {
+  background-color: rgb(139, 155, 161);
+}
+
+/* cardSection */
+#cardSection {
+  padding: 20px;
+  background-color: rgb(189, 187, 203);
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 25px;
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.cardItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.cardMidContent {
+  display: flex;
+  padding: 10px;
+
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.cardItem > p {
+  padding: 10px;
+  font-size: small;
+}
+
+.likeIcon {
+  width: 24px;
+  cursor: pointer;
+}
+
+.likeIcon:hover {
+  content: url("./assets/heart_red.svg");
+}
+
+/* footer 부분 */
+footer {
+  background-color: white;
+  padding: 30px 15px;
+}
+
+footer > p {
+  margin: 5px;
+}
+
+/* 무한 배너 */
+
+#banner {
+  margin-bottom: 30px;
+}
+
+.bannerSection {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerTrack {
+  display: flex;
+  animation: rolling 6s linear infinite;
+  gap: 10px;
+  width: max-content;
+  overflow: visible;
+}
+
+.bannerTrack > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.bannerTrack:hover {
+  animation-play-state: paused;
+}
+
+.bannerTrack > img:hover {
+  transform: scale(1.04);
+  border-radius: 15px;
+}
+
+/* nav바 부분*/
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  bottom: 300px;
+  width: 130px;
+  margin-left: 15px;
+  background-color: #dddddd;
+  padding: 20px;
+}
+
+nav > div {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav > ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: white;
+  border-radius: 10px;
+}
+
+a[href^="#heroSection"] {
+  border-radius: 10px 10px 0 0;
+}
+
+a[href^="#footer"] {
+  border-radius: 0 0 10px 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 50px;
+}
+
+@keyframes rolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

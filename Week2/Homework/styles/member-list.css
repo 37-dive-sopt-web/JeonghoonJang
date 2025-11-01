@@ -1,0 +1,54 @@
+.listSection {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-white);
+  padding: 3.6rem 2.4rem;
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+.listHeader {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.listButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.listTable {
+  width: 100%;
+  margin-top: 2.4rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tableHeader {
+  align-items: center;
+  background-color: var(--color-primary-300);
+}
+
+.tableHeader > th {
+  font-size: 1.4rem;
+}
+
+.listTable th,
+.listTable td {
+  align-items: center;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.4rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.listTable th:first-child,
+.listTable td:first-child {
+  width: 4rem;
+}
+
+.listBodyItem:hover {
+  background-color: var(--color-primary-100);
+}

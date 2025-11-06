@@ -13,7 +13,7 @@ const filterForm = document.querySelector(".filterSection");
 const resetButton = filterForm.querySelector('button[type="reset"]');
 
 const deleteListItemButton = document.querySelector(
-  '.listButtons button[type="delete"]'
+  ".listButtons #deleteSelected"
 );
 
 if (!memberStorageService.hasMembers()) {

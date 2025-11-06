@@ -1,0 +1,73 @@
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  background-color: var(--color-bg-white);
+  padding: 3.6rem 2.4rem;
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+.filterHeader {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.filterSection > fieldset {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.filterLabel {
+  font-size: 1.2rem;
+}
+
+/* 이름 */
+.filterSection > fieldset label:nth-of-type(1) {
+  grid-column: 1 / 4;
+}
+
+/* 영문이름 */
+.filterSection > fieldset label:nth-of-type(2) {
+  grid-column: 1 / 4;
+}
+
+/* 깃허브 */
+.filterSection > fieldset label:nth-of-type(3) {
+  grid-column: 1 / 2;
+}
+
+/* 성별 */
+.filterSection > fieldset label:nth-of-type(4) {
+  grid-column: 2 / 3;
+}
+
+/* 역할 */
+.filterSection > fieldset label:nth-of-type(5) {
+  grid-column: 3 / 4;
+}
+
+/* 금잔디조 */
+.filterSection > fieldset label:nth-of-type(6) {
+  grid-column: 1 / 2;
+}
+
+/* 나이 */
+.filterSection > fieldset label:nth-of-type(7) {
+  grid-column: 2 / 4;
+}
+
+.filterSection > fieldset label {
+  display: grid;
+  grid-template-columns: var(--label-w, 5rem) 1fr;
+  align-items: center;
+}
+
+.filterButtons {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}

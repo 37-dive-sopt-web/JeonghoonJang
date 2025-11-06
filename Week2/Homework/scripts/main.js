@@ -20,6 +20,10 @@ if (!memberStorageService.hasMembers()) {
   memberStorageService.saveMembers(MOCK_MEMBERS_DATA);
 }
 
+const genderToKorean = (gender) => {
+  return (gender = gender === "male" ? "남자" : "여자");
+};
+
 /**
  * 멤버 리스트를 렌더링해요.
  * - 필터링된 리스트가 있으면 해당 데이터로 렌더링하고,
@@ -57,7 +61,7 @@ const render = (filteredList) => {
           <td>${name}</td>
           <td>${englishName}</td>
           <td><a href="https://github.com/${github}" target="_blank" rel="noreferrer">${github}</a></td>
-          <td>${gender}</td>
+          <td>${genderToKorean(gender)}</td>
           <td>${role}</td>
           <td>${codeReviewGroup}</td>
           <td>${age}</td>

@@ -21,11 +21,10 @@ header > h1 {
   font-size: 3.6rem;
 }
 
-header > p:first-child {
+header > div {
   font-size: 3.6rem;
 }
 
-header > p:last-child {
+header > p {
   font-size: 1.6rem;
-  cursor: pointer;
 }

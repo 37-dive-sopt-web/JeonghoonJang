@@ -10,10 +10,10 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
   </head>
-  <script type="module" src="./scripts/index.js"></script>
   <body>
+    <script type="module" src="./scripts/index.js"></script>
     <header>
-      <p>😎</p>
+      <div>😎</div>
       <h1 class="title">웨비 정보 확인 페이지</h1>
       <p>🙂‍↕️ DIVE SOPT 37기 OB 장정훈 💯</p>
     </header>
@@ -94,18 +94,18 @@
           <button type="button" id="openModal">추가</button>
         </div>
         <table class="listTable">
-          <thead class="listHeader">
+          <thead>
             <tr class="tableHeader">
-              <th>
+              <th scope="col">
                 <input type="checkbox" id="checkAllList" />
               </th>
-              <th>이름</th>
-              <th>영문 이름</th>
-              <th>깃허브</th>
-              <th>성별</th>
-              <th>역할</th>
-              <th>금잔디조</th>
-              <th>나이</th>
+              <th scope="col">이름</th>
+              <th scope="col">영문 이름</th>
+              <th scope="col">깃허브</th>
+              <th scope="col">성별</th>
+              <th scope="col">역할</th>
+              <th scope="col">금잔디조</th>
+              <th scope="col">나이</th>
             </tr>
           </thead>
           <tbody id="listBody"></tbody>

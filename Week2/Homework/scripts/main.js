@@ -60,7 +60,7 @@ const render = (filteredList) => {
           <td><input type="checkbox" class="checkListItem" /></td>
           <td>${name}</td>
           <td>${englishName}</td>
-          <td><a href="https://github.com/${github}" target="_blank" rel="noreferrer">${github}</a></td>
+          <td><a href="https://github.com/${github}" target="_blank" rel="noreferrer noopener">${github}</a></td>
           <td>${genderToKorean(gender)}</td>
           <td>${role}</td>
           <td>${codeReviewGroup}</td>

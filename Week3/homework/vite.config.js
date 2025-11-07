@@ -12,6 +12,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
+      "@widgets": path.resolve(__dirname, "src/widgets"),
+      "@layout": path.resolve(__dirname, "src/layout"),
       "@shared": path.resolve(__dirname, "src/shared"),
       "@pages": path.resolve(__dirname, "src/pages"),
     },

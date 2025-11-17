@@ -30,7 +30,7 @@ const Login = () => {
 
     try {
       const response = await loginApi({ username, password });
-      localStorage.setItem("userId", String(response.userId));
+      localStorage.setItem("userId", String(response.data.userId));
       navigate(ROUTE_PATH.MYPAGE);
     } catch {
       setError("아이디 또는 비밀번호가 올바르지 않습니다.");

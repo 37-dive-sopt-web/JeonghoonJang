@@ -16,12 +16,17 @@ export interface SignupRequest {
  * 회원가입 응답 타입
  */
 export interface SignupResponse {
-  id: number;
-  username: string;
-  name: string;
-  email: string;
-  age: number;
-  status: string;
+  success: boolean;
+  code: string;
+  message: string;
+  data: {
+    id: number;
+    username: string;
+    name: string;
+    email: string;
+    age: number;
+    status: string;
+  };
 }
 
 /**

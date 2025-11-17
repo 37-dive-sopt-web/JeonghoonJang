@@ -13,8 +13,13 @@ export interface LoginRequest {
  * 로그인 응답 타입
  */
 export interface LoginResponse {
-  userId: number;
-  message?: string;
+  success: boolean;
+  code: string;
+  message: string;
+  data: {
+    userId: number;
+    message: string;
+  };
 }
 
 /**

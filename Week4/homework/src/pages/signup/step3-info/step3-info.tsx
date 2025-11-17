@@ -53,7 +53,7 @@ const Step3Info = ({ onPrev, formData }: Step3InfoProps) => {
         email,
         age: ageNumber,
       });
-      localStorage.setItem("userId", String(response.id));
+      localStorage.setItem("userId", String(response.data.id));
       alert(`${name}님, 회원가입이 완료되었습니다.`);
       navigate(ROUTE_PATH.LOGIN);
     } catch {

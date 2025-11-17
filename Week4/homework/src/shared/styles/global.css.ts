@@ -2,14 +2,6 @@ import { globalStyle, style } from "@vanilla-extract/css";
 
 import { themeVars } from "./theme.css";
 
-globalStyle(":root", {
-  vars: {
-    "--min-width": "375px",
-    "--max-width": "430px",
-    "--height": "100dvh",
-  },
-});
-
 globalStyle("html, body", {
   position: "relative",
   width: themeVars.width.full,
@@ -32,4 +24,6 @@ export const rootStyle = style({
   margin: "0 auto",
   minHeight: "100dvh",
   backgroundColor: themeVars.color.grayscale9,
+  alignItems: "center",
+  justifyContent: "center",
 });

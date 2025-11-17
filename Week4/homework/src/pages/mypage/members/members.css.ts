@@ -4,61 +4,35 @@ import { style } from "@vanilla-extract/css";
 import { themeVars } from "@shared/styles/theme.css";
 
 export const container = style({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  width: "100%",
   minHeight: "100dvh",
-  width: "100%",
   backgroundColor: themeVars.color.grayscale9,
-  padding: "2rem",
 });
 
-export const signupBox = style({
-  width: "100%",
-  maxWidth: "43rem",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  gap: "3rem",
-});
-
-export const header = style({
-  width: "100%",
-  display: "flex",
-  alignItems: "center",
-  gap: "1.6rem",
-});
-
-export const backButton = style({
-  background: "none",
-  border: "none",
-  cursor: "pointer",
-  padding: "0.4rem",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: themeVars.color.grayscale1,
+export const content = style({
+  padding: "3rem",
+  maxWidth: "80rem",
+  margin: "0 auto",
 });
 
 export const title = style({
-  fontSize: "3.2rem",
+  fontSize: "2.4rem",
   fontWeight: 700,
   color: themeVars.color.grayscale1,
-  margin: 0,
+  marginBottom: "3rem",
 });
 
 export const form = style({
-  width: "100%",
   display: "flex",
   flexDirection: "column",
-  gap: "2rem",
+  gap: "2.4rem",
+  marginBottom: "3rem",
 });
 
 export const inputGroup = style({
   display: "flex",
   flexDirection: "column",
   gap: "0.8rem",
-  width: "100%",
 });
 
 export const label = style({
@@ -76,28 +50,6 @@ export const input = style({
   borderRadius: "0.8rem",
   backgroundColor: themeVars.color.grayscale9,
   outline: "none",
-  "::placeholder": {
-    color: themeVars.color.grayscale4,
-  },
-});
-
-export const passwordWrapper = style({
-  position: "relative",
-  width: "100%",
-});
-
-export const eyeButton = style({
-  position: "absolute",
-  right: "1.6rem",
-  top: "50%",
-  transform: "translateY(-50%)",
-  border: "none",
-  cursor: "pointer",
-  padding: "0.4rem",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: themeVars.color.grayscale3,
 });
 
 export const errorMessage = style({
@@ -107,7 +59,7 @@ export const errorMessage = style({
   padding: "0.8rem",
 });
 
-export const nextButton = recipe({
+export const confirmButton = recipe({
   base: {
     width: "100%",
     height: "5rem",
@@ -135,17 +87,31 @@ export const nextButton = recipe({
   },
 });
 
-export const loginLink = style({
-  fontSize: "1.4rem",
-  color: themeVars.color.grayscale3,
-  textDecoration: "none",
+export const memberInfo = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: "1.6rem",
+  padding: "2.4rem",
+  backgroundColor: themeVars.color.grayscale9,
+  borderRadius: "0.8rem",
+  border: `1px solid ${themeVars.color.grayscale5}`,
 });
 
-export const loginLinkText = style({
-  color: themeVars.color.primary,
+export const infoRow = style({
+  display: "flex",
+  alignItems: "center",
+  gap: "2rem",
 });
 
-export const footerText = style({
-  fontSize: "1.4rem",
+export const infoLabel = style({
+  fontSize: "1.6rem",
+  fontWeight: 500,
   color: themeVars.color.grayscale3,
+  minWidth: "10rem",
+});
+
+export const infoValue = style({
+  fontSize: "1.6rem",
+  fontWeight: 400,
+  color: themeVars.color.grayscale1,
 });

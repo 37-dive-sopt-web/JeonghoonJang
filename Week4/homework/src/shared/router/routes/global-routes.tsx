@@ -1,6 +1,7 @@
 import {
   HomePage,
   LoginPage,
+  MembersPage,
   MyPagePage,
   SignupPage,
 } from "@shared/router/lazy";
@@ -22,5 +23,9 @@ export const globalRoutes = [
   {
     path: ROUTE_PATH.MYPAGE,
     element: <MyPagePage />,
+  },
+  {
+    path: ROUTE_PATH.MEMBERS,
+    element: <MembersPage />,
   },
 ];

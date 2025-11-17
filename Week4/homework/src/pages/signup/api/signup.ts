@@ -1,5 +1,6 @@
 import { api } from "@shared/apis/config/instance";
 import { END_POINT } from "@shared/apis/config/end-point";
+import type { ApiResponse, User } from "@shared/types/user";
 
 /**
  * 회원가입 요청 타입
@@ -12,22 +13,7 @@ export interface SignupRequest {
   age: number;
 }
 
-/**
- * 회원가입 응답 타입
- */
-export interface SignupResponse {
-  success: boolean;
-  code: string;
-  message: string;
-  data: {
-    id: number;
-    username: string;
-    name: string;
-    email: string;
-    age: number;
-    status: string;
-  };
-}
+export type SignupResponse = ApiResponse<User>;
 
 /**
  * 회원가입 API 호출

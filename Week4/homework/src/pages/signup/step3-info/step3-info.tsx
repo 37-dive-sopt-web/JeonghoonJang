@@ -2,8 +2,12 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 
 import { ROUTE_PATH } from "@shared/router/path";
-import { signupApi } from "../api/signup";
+import { FormInput, FormButton, BackButton } from "@shared/components";
+import { setUserId } from "@shared/utils/storage";
+import { isValidNumber } from "@shared/utils/validation";
+
 import * as styles from "../signup.css";
+import { signupApi } from "@pages/signup/api/signup";
 
 interface Step3InfoProps {
   onPrev: () => void;
@@ -40,7 +44,7 @@ const Step3Info = ({ onPrev, formData }: Step3InfoProps) => {
     e.preventDefault();
 
     const ageNumber = Number(age);
-    if (isNaN(ageNumber) || ageNumber <= 0) {
+    if (!isValidNumber(age)) {
       alert("올바른 나이를 입력해주세요.");
       return;
     }
@@ -53,7 +57,7 @@ const Step3Info = ({ onPrev, formData }: Step3InfoProps) => {
         email,
         age: ageNumber,
       });
-      localStorage.setItem("userId", String(response.data.id));
+      setUserId(response.data.id);
       alert(`${name}님, 회원가입이 완료되었습니다.`);
       navigate(ROUTE_PATH.LOGIN);
     } catch {
@@ -72,76 +76,49 @@ const Step3Info = ({ onPrev, formData }: Step3InfoProps) => {
     <div className={styles.container}>
       <div className={styles.signupBox}>
         <div className={styles.header}>
-          <button
-            type="button"
-            onClick={onPrev}
-            className={styles.backButton}
-            aria-label="뒤로가기"
-          >
-            ←
-          </button>
+          <BackButton onClick={onPrev} />
           <h1 className={styles.title}>회원가입</h1>
         </div>
 
         <form onSubmit={handleSubmit} className={styles.form}>
-          <div className={styles.inputGroup}>
-            <label htmlFor="name" className={styles.label}>
-              이름
-            </label>
-            <input
-              id="name"
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="이름을 입력해 주세요"
-              className={styles.input}
-            />
-          </div>
+          <FormInput
+            id="name"
+            label="이름"
+            value={name}
+            onChange={setName}
+            placeholder="이름을 입력해 주세요"
+          />
 
-          <div className={styles.inputGroup}>
-            <label htmlFor="email" className={styles.label}>
-              이메일
-            </label>
-            <input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="name@example.com"
-              className={styles.input}
-            />
-          </div>
+          <FormInput
+            id="email"
+            label="이메일"
+            type="email"
+            value={email}
+            onChange={setEmail}
+            placeholder="name@example.com"
+            error={validationMessage}
+          />
 
-          <div className={styles.inputGroup}>
-            <label htmlFor="age" className={styles.label}>
-              나이
-            </label>
-            <input
-              id="age"
-              type="number"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
-              placeholder="숫자로 입력"
-              className={styles.input}
-            />
-          </div>
+          <FormInput
+            id="age"
+            label="나이"
+            type="number"
+            value={age}
+            onChange={setAge}
+            placeholder="숫자로 입력"
+          />
 
           {validationMessage && (
             <div className={styles.errorMessage}>{validationMessage}</div>
           )}
 
-          <button
-            type="submit"
-            className={styles.nextButton({ disabled: !isFormValid })}
-          >
+          <FormButton type="submit" disabled={!isFormValid}>
             회원가입
-          </button>
+          </FormButton>
         </form>
 
         <div>
-          <span style={{ fontSize: "1.4rem", color: "#868E96" }}>
-            이미 계정이 있나요?{" "}
-          </span>
+          <span className={styles.footerText}>이미 계정이 있나요? </span>
           <Link to={ROUTE_PATH.LOGIN} className={styles.loginLink}>
             <span className={styles.loginLinkText}>로그인으로 돌아가기</span>
           </Link>

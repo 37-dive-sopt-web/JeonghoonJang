@@ -1,5 +1,6 @@
 import { END_POINT } from "@shared/apis/config/end-point";
 import { api } from "@shared/apis/config/instance";
+import type { ApiResponse } from "@shared/types/user";
 
 /**
  * 로그인 요청 타입
@@ -10,17 +11,14 @@ export interface LoginRequest {
 }
 
 /**
- * 로그인 응답 타입
+ * 로그인 응답 데이터 타입
  */
-export interface LoginResponse {
-  success: boolean;
-  code: string;
+export interface LoginResponseData {
+  userId: number;
   message: string;
-  data: {
-    userId: number;
-    message: string;
-  };
 }
+
+export type LoginResponse = ApiResponse<LoginResponseData>;
 
 /**
  * 로그인 API 호출

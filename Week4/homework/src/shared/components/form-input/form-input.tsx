@@ -1,4 +1,4 @@
-import * as styles from "./FormInput.css";
+import * as styles from "./form-input.css";
 
 interface FormInputProps {
   id: string;

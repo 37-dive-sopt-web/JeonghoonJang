@@ -1,6 +1,5 @@
-export { default as PasswordInput } from "./PasswordInput/PasswordInput";
-export { default as FormInput } from "./FormInput/FormInput";
-export { default as FormButton } from "./FormButton/FormButton";
-export { default as BackButton } from "./BackButton/BackButton";
-export { default as Modal } from "./Modal/Modal";
-
+export { default as PasswordInput } from "./password-input/password-input";
+export { default as FormInput } from "./form-input/form-input";
+export { default as FormButton } from "./form-button/form-button";
+export { default as BackButton } from "./back-button/back-button";
+export { default as Modal } from "./modal/modal";

@@ -1,4 +1,4 @@
-import * as styles from "./FormButton.css";
+import * as styles from "./form-button.css";
 
 interface FormButtonProps {
   type?: "button" | "submit" | "reset";
@@ -26,3 +26,4 @@ const FormButton = ({
 };
 
 export default FormButton;
+

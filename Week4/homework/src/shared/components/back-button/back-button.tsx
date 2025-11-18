@@ -1,4 +1,4 @@
-import * as styles from "./BackButton.css";
+import * as styles from "./back-button.css";
 
 interface BackButtonProps {
   onClick: () => void;
